@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <title>Springusoid</title>
+    <style>
+        body {
+            padding-bottom: 100px;
+            font-family: Arial, sans-serif;
+            text-align: left;
+        }
+        .controls {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #f0f0f0;
+            padding: 10px;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+        .master-container {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        .letter-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .letter-graph {
+            width: 30%;
+            margin: 5px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Springusoid</h1>
+
+    <div class="master-container">
+        <div id="master" style="width: 100%;"></div>
+    </div>
+
+    <h2> Springs are explored in physics courses as emblems of harmonic motion. In textbooks, accompanying a stock image of a bouncing spring, 3 curves are commonly pictured: position, velocity, and acceleration of the spring over time. And if you didn't get enough sleep the night before, or if you stare so intently at the graphs that the curves begin to float up off the page, the diagram will speak to you in Springusoid. Adjust the sliders at the bottom of the page to see how varying each parameter affects the typeface, and see for yourself how this font stretches to fill or shrinks to fit all of your design needs. </h2>
+
+    <div class="letter-container">
+        <div id="graph_A" class="letter-graph"></div>
+        <div id="graph_B" class="letter-graph"></div>
+        <div id="graph_C" class="letter-graph"></div>
+        <div id="graph_D" class="letter-graph"></div>
+        <div id="graph_E" class="letter-graph"></div>
+        <div id="graph_F" class="letter-graph"></div>
+        <div id="graph_G" class="letter-graph"></div>
+        <div id="graph_H" class="letter-graph"></div>
+        <div id="graph_I" class="letter-graph"></div>
+        <div id="graph_J" class="letter-graph"></div>
+        <div id="graph_K" class="letter-graph"></div>
+        <div id="graph_L" class="letter-graph"></div>
+        <div id="graph_M" class="letter-graph"></div>
+        <div id="graph_N" class="letter-graph"></div>
+        <div id="graph_O" class="letter-graph"></div>
+        <div id="graph_P" class="letter-graph"></div>
+        <div id="graph_Q" class="letter-graph"></div>
+        <div id="graph_R" class="letter-graph"></div>
+        <div id="graph_S" class="letter-graph"></div>
+        <div id="graph_T" class="letter-graph"></div>
+        <div id="graph_U" class="letter-graph"></div>
+        <div id="graph_V" class="letter-graph"></div>
+        <div id="graph_W" class="letter-graph"></div>
+        <div id="graph_X" class="letter-graph"></div>
+        <div id="graph_Y" class="letter-graph"></div>
+        <div id="graph_Z" class="letter-graph"></div>
+    </div>
+    
+    <div class="controls">
+        <label for="A">Amplitude (A):</label>
+        <input type="range" id="A" min="0.1" max="2" value="1" step="0.1" oninput="updateGraphs()">
+        <span id="A-val">1</span>
+
+        <label for="k">Spring Constant (k):</label>
+        <input type="range" id="k" min="0.1" max="5" value="2" step="0.1" oninput="updateGraphs()">
+        <span id="k-val">2</span>
+
+        <label for="m">Mass (m):</label>
+        <input type="range" id="m" min="0.1" max="5" value="1" step="0.1" oninput="updateGraphs()">
+        <span id="m-val">1</span>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
